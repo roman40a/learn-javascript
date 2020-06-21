@@ -10,24 +10,17 @@
 <body>
     <script>
         'use strict';
-        const n = 10;
-        let result = '';
+        let n = 20;
+
+        nextNumber:
         for (let i = 2; i <= n; i++) {
-            let mod = 0;
             for (let j = 2; j < i; j++) {
-                mod = i % j;
-                if (mod !== 0) {
-                    continue;
+                if (i % j == 0) {
+                    continue nextNumber;
                 }
             }
-            console.log(mod, result);
-            if (mod === 0) {
-                result += i + ',';
-            }
-
-        }
-        alert(result);
-
+            alert(i);
+        }    
     </script>
 </body>
 
