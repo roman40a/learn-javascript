@@ -10,13 +10,13 @@
 <body>
     <script>
         'use strict';
-        for (let i = prompt('Введите число больше 100', ''); +i < 100; i = prompt('Введите число больше 100', '0')) {
-            if (i == null) break; // Не уверен, что так правильно...
 
-            else if (!+i > 100) break;
-        }
+        let num
+        do {
+            num = prompt('Введите число больше 100', '0');
+            if (!num) break;
+        } while (+num < 100);
 
-        //alert('Готово');
     </script>
 </body>
 
