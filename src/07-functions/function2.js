@@ -1,8 +1,11 @@
 'use strict'
 
-let age = +prompt('Ваш возраст?', '18');
+let a = +prompt('Введите первое число', '');
+let b = +prompt('Введите второе число', '');
 
-function checkAge(age) {
-    return (age > 18) || confirm('Родители разрешили?');
+function min(a, b) {
+    return (a > b) ? b : a;
 }
-checkAge(age);
+
+min(a, b);
+alert('Меньшее из введенных чисел: ' + min(a, b));
