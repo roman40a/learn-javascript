@@ -7,7 +7,7 @@ function getMaxSubSum(arr) {
         subSum += num;
         maxSum = Math.max(maxSum, subSum);
         if (subSum < 0) subSum = 0;
-    }
+    };
     return maxSum;
 };
 
