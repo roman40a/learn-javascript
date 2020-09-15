@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        .hour {
+            color: rgb(156, 154, 8);
+        }
+
+        .min {
+            color: rgb(123, 255, 0);
+        }
+
+        .sec {
+            color: rgb(28, 119, 255);
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="colorClock.js"></script>
+
+    <div id="clock">
+        <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
+    </div>
+
+    <input type="button" onclick="clockStart()" value="Старт">
+
+    <input type="button" onclick="clockStop()" value="Стоп">
+
+</body>
+
+</html>
