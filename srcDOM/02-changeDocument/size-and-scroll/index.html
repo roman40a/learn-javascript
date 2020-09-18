@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поле</title>
+    <style>
+        #field {
+            width: 200px;
+            border: 10px groove black;
+            background-color: #00FF00;
+            position: relative;
+        }
+
+        #ball {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body id="elem">
+
+
+    <!-- Задача 1 -->
+    <!-- <script>
+        let elem = querySelector(elem)
+        let scrollBottom = elem.scrollHeight - elem.scrollTop - elem.clientHeight;
+    </script> -->
+
+    <!-- Задача 2 -->
+
+    <!-- <script>
+
+        // let elem = document.getElementById('elem');
+
+        // elem.style.overflowY = 'scroll';
+        // // elem.style.width = '500px';
+        // elem.style.height = '50px';
+
+        let div = document.createElement('div');
+
+        div.style.overflowY = 'scroll';
+        div.style.width = '50px';
+        div.style.height = '50px';
+
+        // мы должны вставить элемент в документ, иначе размеры будут равны 0
+        document.body.append(div);
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+
+        div.remove();
+
+
+        // let scrollbarWidth = elem.scrollWidth - elem.clientWidth
+
+        // console.log();
+        console.log(div.scrollWidth);
+        console.log(div.offsetWidth);
+        console.log(div.clientWidth); 
+     </script> -->
+
+    <!-- Задача 3 -->
+
+    <div id="field">
+        <img src="https://en.js.cx/clipart/ball.svg" width="40" height="40" id="ball"> . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . .
+    </div>
+
+    <script src="field.js"></script>
+
+</body>
+
+</html>
