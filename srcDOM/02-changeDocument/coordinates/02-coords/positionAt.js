@@ -9,9 +9,19 @@
    *
    * Оба элемента elem и anchor должны присутствовать в документе
    */
+
+function getCords(elem) {
+    let box = elem.getBoundingClientRect();
+
+    return {
+        top: box.top + pageXOffset,
+        left: box.left + pageXOffset
+    };
+}
+
 function positionAt(anchor, position, elem) {
 
-    let anchorCoords = anchor.getBoundingClientRect();
+    let anchorCoords = getCords(anchor);
 
     switch (position) {
         case "top":
