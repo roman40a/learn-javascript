@@ -8,11 +8,11 @@
 <body>
     <input type="button" id="hider" value="Нажми меня чтобы спрятать текст">
 
-    <div id="text">Тескт</div>
+    <div class="text">Тескт</div>
 
     <script>
         hider.addEventListener("click", () => {
-            text.style.display = "none"
+            document.querySelector('.text').style.display = "none";
         });
     </script>
 

@@ -1,8 +1,15 @@
 'use strict';
 
-document.querySelector(".title").onclick = function () {
+const titleList = document.querySelector(".title")
+const sweetsInList = document.querySelector('.menu')
 
-    sweets.classList.toggle("open")
+titleList.addEventListener('click', () => {
+    sweetsInList.classList.toggle("open")
+});
+
+// document.querySelector(".title").onclick = function () {
+
+
 
     // Альтернативное, более сложное и длинное решение:
     // switch (sweets.classList.value) {
@@ -14,4 +21,4 @@ document.querySelector(".title").onclick = function () {
     //         sweets.classList.remove("open")
     //         break;
     // };
-};
+// };
