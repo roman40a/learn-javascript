@@ -1,0 +1,5 @@
+li span:hover {
+    color: darkblue;
+    font-weight: bold;
+    cursor: pointer;
+}
