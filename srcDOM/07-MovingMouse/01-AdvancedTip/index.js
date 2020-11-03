@@ -7,7 +7,6 @@ document.addEventListener('mouseout', removeToolTip);
 
 function showToolTip(event) {
     const elem = event.target.closest('[data-tooltip]');
-
     if (!elem) return;
 
     tip = document.createElement('div');
