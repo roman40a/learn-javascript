@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(6, 2, 29);
+    color: rgb(154, 178, 207);
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.view,
+.edit {
+  height: 150px;
+  width: 400px;
+  font-family: sans-serif;
+  font-size: 16px;
+  display: block;
+}
+
+.view {
+  /* padding + border = 3px */
+  padding: 2px;
+  border: 1px solid rgb(238, 231, 231);
+}
+
+.edit {
+  /* замена внутреннего отступа рамкой (по-прежнему 3px, и содержимое не смещается) */
+  border: 3px solid rgb(80, 80, 126);
+  padding: 0px;
+}
+
+.edit:focus {
+  /* удаление обводки фокуса в Safari */
+  outline: none;
+}
