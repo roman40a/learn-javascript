@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(10, 11, 37);
+    color: blanchedalmond;
+}
+
+td select,
+        td input {
+            width: 150px;
+            background-color: rgb(27, 32, 77);
+            color: blanchedalmond;
+            
+        }
+
+        #diagram td {
+            vertical-align: bottom;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #diagram div {
+            margin: auto;
+        }
