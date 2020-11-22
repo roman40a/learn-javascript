@@ -22,9 +22,6 @@ const App = () => {
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Settings} />
         </div>
-        {/* <News />
-        <Music />
-        <Settings/> */}
       </div>
     </BrowserRouter>
   );

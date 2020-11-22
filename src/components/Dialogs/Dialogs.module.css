@@ -1,0 +1,5 @@
+.dialogs {
+    display: grid;
+    /* grid-template-areas: "dialogsItems messages"; */
+    grid-template-columns: 4fr 8fr;
+}
