@@ -1,14 +1,15 @@
 import React from 'react';
-import './profile.module.css';
+import stl from './Profile.module.css';
 import Wallpaper from './wallpaper/Wallpaper';
 import Person from './person/Person'
+import Posts from './Posts/Posts';
 
 const Profile = () => {
     return (
-        <div className='profile'>
+        <div className={stl.profile}>
             <Wallpaper />
             <Person />
-            {/* <Posts /> */}
+            <Posts />
         </div>
     );
 }

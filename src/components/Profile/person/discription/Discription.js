@@ -1,9 +1,9 @@
 import React from 'react';
-import './discription.module.css';
+import stl from './Discription.module.css';
 
 const Discription = () => {
     return (
-        <div className='discription'>
+        <div className={stl.discription}>
             Name
             Age
             City

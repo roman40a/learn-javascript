@@ -16,33 +16,11 @@ html {
   grid-gap: 10px;
 }
 
-.header {
-  grid-area: header;
-  background: rgb(181, 182, 235);
-}
-
-.header img {
-  height: 100%;
-}
-
-.navbar {
-  grid-area: navbar;
-  background-color: rgb(14, 4, 68);
-}
-
-.navbar a {
-  text-decoration: none;
-}
-
-.profile {
-  grid-area: profile;
-  background-color: rgb(97, 124, 182);
-}
-
-.profile img {
-  width: 500px;
-}
-
 .avatar img {
   width: 100px;
 }
+
+.app-wrapper-content {
+      grid-area: profile;
+    background-color: rgb(97, 124, 182);
+  }

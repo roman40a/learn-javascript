@@ -1,23 +1,23 @@
 import React from 'react';
-import './navbar.module.css';
+import stl from './Navbar.module.css';
 
 const Navbar = (probs) => {
     return (
         <nav className='navbar'>
             <div>
-                <a href='#s'>Profile</a>
+                <a className={`${stl.item} ${stl.active}`} href='/profile'>Profile</a>
             </div>
             <div>
-                <a href='#s'>Messages</a>
+                <a className={stl.item} href='/dialogs'>Messages</a>
             </div>
             <div>
-                <a href='#s'>News</a>
+                <a className={stl.item} href='/news'>News</a>
             </div>
             <div>
-                <a href='#s'>Music</a>
+                <a className={stl.item} href='/music'>Music</a>
             </div>
             <div>
-                <a href='#s'>Settings</a>
+                <a className={stl.item} href='/settings'>Settings</a>
             </div>
         </nav>
     )

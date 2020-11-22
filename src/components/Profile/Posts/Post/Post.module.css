@@ -1,0 +1,34 @@
+.item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(10, 1, 61);
+    border-radius: 5px;
+    display: grid;
+  grid-template-areas:
+  "ava message"
+  "like like";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.ava {
+    grid-area: ava;
+    width: 70px;
+    border-radius: 40px;
+}
+
+.like {
+    grid-area: like;
+    /* padding-left: 25px; */
+}
+
+.likes {
+    width: 18px;
+    background-color: rgb(97, 124, 182);
+}
+
+.message {
+    margin-top: 30px;
+    grid-area: message;
+}

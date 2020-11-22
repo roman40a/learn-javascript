@@ -1,0 +1,17 @@
+.navbar {
+  padding-left: 10px;
+    grid-area: navbar;
+    background-color: rgb(14, 4, 68);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+.item {
+  color: rgb(0, 195, 255);
+}
+
+.item.active {
+  color: rgb(57, 57, 255);
+}
