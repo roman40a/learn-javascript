@@ -5,8 +5,12 @@ const NewPost = () => {
     return (
         <div className={stl.newPost}>
             Новая запись:
-            <textarea></textarea>
-            <button>Добавить запись</button>
+            <div>
+                <textarea></textarea>
+            </div>
+            <div>
+                <button>Добавить запись</button>
+            </div>
         </div>
     )
 }

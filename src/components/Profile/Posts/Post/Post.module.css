@@ -1,15 +1,15 @@
 .item {
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     border: 1px solid rgb(10, 1, 61);
     border-radius: 5px;
     display: grid;
-  grid-template-areas:
-  "ava message"
-  "like like";
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
+    grid-template-areas:
+    "ava message"
+    "like like";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
 }
 
 .ava {

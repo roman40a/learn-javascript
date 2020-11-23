@@ -1,0 +1,8 @@
+.item a{
+    text-decoration: none;
+    color: rgb(58, 209, 255);
+  }
+  
+  .item .active {
+    color: rgb(0, 0, 200);
+  }

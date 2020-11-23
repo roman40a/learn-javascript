@@ -4,7 +4,6 @@ html {
   margin: 0 auto;
   width: 600px;
   height: 100%;
-  overflow-x: hidden;
 }
 
 .app-wrapper {
@@ -16,10 +15,6 @@ html {
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
-
-/* .avatar img {
-  width: 100px;
-} */
 
 .app-wrapper-content {
     grid-area: profile;

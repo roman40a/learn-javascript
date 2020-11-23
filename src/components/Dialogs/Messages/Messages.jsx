@@ -2,13 +2,21 @@ import React from 'react';
 import Message from './Message/Message';
 import stl from './Messages.module.css';
 
+const messagesData = [
+    { id: 1, message: 'Привет' },
+    { id: 2, message: 'Как дела?' },
+    { id: 3, message: 'Мяу!' },
+    { id: 4, message: 'Я - весёлый котёнок!' },
+]
+
 const Messages = (probs) => {
+
+    const messagesElements = messagesData
+        .map(item => <Message message={item.message} />);
+
     return (
         <div className={stl.messages}>
-            <Message message="Привет" />
-            <Message message="Как дела?" />
-            <Message message="Мяу!" />
-            <Message message="Я - весёлый котёнок!" />
+            {messagesElements}
         </div>
     );
 }
