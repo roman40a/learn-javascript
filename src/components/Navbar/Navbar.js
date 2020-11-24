@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Friends from './Friends/Friends';
 import stl from './Navbar.module.css';
 
 const Navbar = (probs) => {
@@ -19,6 +20,9 @@ const Navbar = (probs) => {
             </div>
             <div className={stl.item}>
                 <NavLink activeClassName={stl.active} to='/settings'>Settings</NavLink>
+            </div>
+            <div className={stl.frends}>
+                <Friends friendsData={probs.navbar.friendsData} />
             </div>
         </nav>
     )

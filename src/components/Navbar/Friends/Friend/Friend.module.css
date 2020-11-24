@@ -1,0 +1,15 @@
+.item {
+    padding-top: 10px;
+}
+
+.ava img {
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+}
+
+.name {
+    color: rgb(154, 228, 250);
+    font-size: 12px;
+    text-align: center;
+}

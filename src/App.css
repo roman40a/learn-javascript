@@ -2,7 +2,7 @@ html {
   background-color: rgb(30, 27, 92);
   color: antiquewhite;
   margin: 0 auto;
-  width: 600px;
+  width: 700px;
   height: 100%;
 }
 
@@ -12,7 +12,7 @@ html {
   "header header"
   "navbar profile";
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 3fr 9fr;
   grid-gap: 10px;
 }
 

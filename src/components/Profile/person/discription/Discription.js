@@ -5,16 +5,16 @@ const Discription = () => {
     return (
         <div className={stl.discription}>
             <div>
-                Name
+                Name: Mr.Cat
             </div>
             <div>
-                Age
+                Age: 1 yaer
             </div>
             <div>
-                City
+                City: Catwill
             </div>
             <div>
-                Education
+                Education: Micecatching
             </div>
         </div>
     )

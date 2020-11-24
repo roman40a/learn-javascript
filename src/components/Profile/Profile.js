@@ -4,12 +4,12 @@ import Wallpaper from './wallpaper/Wallpaper';
 import Person from './person/Person'
 import Posts from './Posts/Posts';
 
-const Profile = () => {
+const Profile = (probs) => {
     return (
         <div className={stl.profile}>
             <Wallpaper />
             <Person />
-            <Posts />
+            <Posts postsData={probs.profilePage.postsData} />
         </div>
     );
 }

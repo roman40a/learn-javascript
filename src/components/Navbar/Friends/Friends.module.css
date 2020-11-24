@@ -1,0 +1,11 @@
+.title {
+    margin-top: 30px;
+    color: rgb(0, 195, 255);
+    font-size: large;
+  }
+
+.friendsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
