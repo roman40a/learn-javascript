@@ -8,7 +8,7 @@ const Discription = () => {
                 Name: Mr.Cat
             </div>
             <div>
-                Age: 1 yaer
+                Age: 1 year
             </div>
             <div>
                 City: Catwill

@@ -1,4 +1,5 @@
 import React from 'react';
+import store from '../../redux/store';
 import stl from './Dialogs.module.css';
 import DialogsItems from './DialogsItems/DialogItems';
 import Messages from './Messages/Messages';
@@ -6,8 +7,9 @@ import Messages from './Messages/Messages';
 const Dialogs = (probs) => {
     return (
         <div className={stl.dialogs}>
-            <DialogsItems dialogsData={probs.dialogsPage.dialogsData} />
-            <Messages messagesData={probs.dialogsPage.messagesData} />
+            <DialogsItems dialogsData={probs.store.getState().dialogsPage.dialogsData} />
+            <Messages store={probs.store}
+                messagesData={probs.store.getState().dialogsPage.messagesData} />
         </div>
     );
 }

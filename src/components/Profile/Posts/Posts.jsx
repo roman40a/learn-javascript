@@ -5,13 +5,15 @@ import stl from './Posts.module.css';
 
 const Posts = (probs) => {
 
-    const postsElements = probs.postsData
+    const postsElements = probs.store.getState().profilePage.postsData
         .map(post => <Post likes={post.likes} message={post.message} />);
 
     return (
         <div className={stl.posts}>
             <h3>Мои записи</h3>
-            <NewPost />
+            <NewPost
+                textareasValue={probs.store.getState().profilePage.textareasValue}
+                store={probs.store} />
             {postsElements}
         </div>
     )

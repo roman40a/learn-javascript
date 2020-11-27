@@ -9,7 +9,7 @@ const Profile = (probs) => {
         <div className={stl.profile}>
             <Wallpaper />
             <Person />
-            <Posts postsData={probs.profilePage.postsData} />
+            <Posts store={probs.store} />
         </div>
     );
 }

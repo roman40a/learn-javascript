@@ -1,0 +1,19 @@
+.message {
+    border: 1px solid rgb(10, 1, 61);
+    border-radius: 5px;
+    padding: 5px;
+    width: 175px;
+    float: right;
+    margin: 5px 5px;
+    background-color: rgb(46, 48, 138);
+}
+
+.messageMe {
+    border: 1px solid rgb(10, 1, 61);
+    border-radius: 5px;
+    padding: 5px;
+    width: 175px;
+    margin: 5px 5px;
+    float: left;
+    background-color: rgb(122, 166, 223);
+}

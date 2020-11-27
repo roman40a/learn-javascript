@@ -5,7 +5,13 @@ import stl from './Friends.module.css';
 const Friends = (probs) => {
 
     const friendsElements = probs.friendsData
-        .map(friend => <Friend avUrl={friend.avUrl} name={friend.name} />);
+        .map((friend, index) => {
+            if (index <= 2) {
+                return <Friend avUrl={friend.avUrl} name={friend.name} />
+            } else {
+                return
+            }
+        });
 
     return (
         <div className={stl.friends}>
