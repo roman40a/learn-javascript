@@ -1,6 +1,6 @@
 import React from 'react';
 import stl from './NewMessage.module.css';
-import { addMessageCreator, addChangeNewMessageText } from '../../../../redux/store';
+import { addMessageCreator, addChangeNewMessageText } from '../../../../redux/dialogsPageReducer';
 
 const NewMessage = (probs) => {
 

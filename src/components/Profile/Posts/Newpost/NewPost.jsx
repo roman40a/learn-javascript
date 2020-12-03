@@ -1,6 +1,6 @@
 import React from 'react';
 import stl from './NewPost.module.css';
-import { addPostCreator, addChangeNewPostText } from '../../../../redux/store';
+import { addPostCreator, addChangeNewPostText } from '../../../../redux/profilePageReducer';
 
 const NewPost = (probs) => {
     let addPost = () => {

@@ -1,7 +1,7 @@
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const ADD_POST = 'ADD-POST';
-const ADD_CHANGE_NEW_POST_TEXT = 'ADD-CHANGE-NEW-POST-TEXT';
-const ADD_CHANGE_NEW_MESSAGE_TEXT = 'ADD-CHANGE-NEW-MESSAGE-TEXT';
+import dialogsPageReducer from "./dialogsPageReducer";
+import navbarReducer from "./navbarReducer";
+import profilePageReducer from "./profilePageReducer";
+
 
 let store = {
     _subscriber() {
@@ -53,72 +53,12 @@ let store = {
     },
 
     dispatch(action) {
-        switch (action.type) {
-            case ADD_POST:
-                this._addPost();
-                break;
+        this._state.dialogsPage = dialogsPageReducer(this._state.dialogsPage, action);
+        this._state.profilePage = profilePageReducer(this._state.profilePage, action);
+        this._state.navbar = navbarReducer(this._state.navbar, action);
 
-            case ADD_MESSAGE:
-                this._addMessage();
-                break;
-
-            case ADD_CHANGE_NEW_POST_TEXT:
-                this._addChangeNewPostText(action.newText);
-                break;
-
-            case ADD_CHANGE_NEW_MESSAGE_TEXT:
-                this._addChangeNewMessageText(action.newText);
-                break;
-
-            default:
-                break;
-        }
-    },
-
-    _addPost() {
-        if (!this._state.profilePage.textareasValue) return;
-
-        let newPost = {
-            id: this._state.profilePage.postsData[this._state.profilePage.postsData.length - 1].id + 1,
-            message: this._state.profilePage.textareasValue,
-            likes: 0,
-        };
-
-        this._state.profilePage.postsData.unshift(newPost);
-        this._state.profilePage.textareasValue = '';
         this._subscriber();
     },
-
-    _addMessage() {
-        if (!this._state.dialogsPage.messagesData.textareasValue) return;
-
-        let newMessage = {
-            id: this._state.dialogsPage.messagesData[this._state.dialogsPage.messagesData.length - 1].id + 1,
-            message: this._state.dialogsPage.messagesData.textareasValue,
-            me: true,
-        };
-
-        this._state.dialogsPage.messagesData.push(newMessage);
-        this._state.dialogsPage.messagesData.textareasValue = '';
-        this._subscriber();
-
-    },
-
-    _addChangeNewPostText(text) {
-        this._state.profilePage.textareasValue = text;
-        this._subscriber(); //rerenderEntireTree(state); 
-    },
-
-    _addChangeNewMessageText(text) {
-        this._state.dialogsPage.messagesData.textareasValue = text;
-        this._subscriber(); //rerenderEntireTree(state); 
-    },
-
 }
-
-export const addPostCreator = () => ({ type: ADD_POST });
-export const addMessageCreator = () => ({ type: ADD_MESSAGE });
-export const addChangeNewPostText = (text) => ({ type: ADD_CHANGE_NEW_POST_TEXT, newText: text });
-export const addChangeNewMessageText = (text) => ({ type: ADD_CHANGE_NEW_MESSAGE_TEXT, newText: text });
 
 export default store;
