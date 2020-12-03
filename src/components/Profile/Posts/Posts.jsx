@@ -13,7 +13,9 @@ const Posts = (probs) => {
             <h3>Мои записи</h3>
             <NewPost
                 textareasValue={probs.store.getState().profilePage.textareasValue}
-                store={probs.store} />
+                store={probs.store}
+                dispatch={probs.dispatch}
+            />
             {postsElements}
         </div>
     )

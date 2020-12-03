@@ -9,7 +9,7 @@ const Dialogs = (probs) => {
         <div className={stl.dialogs}>
             <DialogsItems dialogsData={probs.store.getState().dialogsPage.dialogsData} />
             <Messages store={probs.store}
-                messagesData={probs.store.getState().dialogsPage.messagesData} />
+                messagesData={probs.store.getState().dialogsPage.messagesData} dispatch={probs.dispatch} />
         </div>
     );
 }

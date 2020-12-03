@@ -1,3 +1,8 @@
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const ADD_POST = 'ADD-POST';
+const ADD_CHANGE_NEW_POST_TEXT = 'ADD-CHANGE-NEW-POST-TEXT';
+const ADD_CHANGE_NEW_MESSAGE_TEXT = 'ADD-CHANGE-NEW-MESSAGE-TEXT';
+
 let store = {
     _subscriber() {
         console.log("нет наблюдателей (подписчиков)");
@@ -20,8 +25,6 @@ let store = {
                 { id: 2, name: 'Рома' },
                 { id: 3, name: 'Иван' },
                 { id: 4, name: 'Юра' },
-                // { id: 5, name: 'Алексей Алексеевич' },
-                // { id: 6, name: 'Name' },
             ],
             messagesData: [
                 { id: 1, message: 'Привет!', me: true, },
@@ -49,7 +52,30 @@ let store = {
         this._subscriber = observer;
     },
 
-    addPost() {
+    dispatch(action) {
+        switch (action.type) {
+            case ADD_POST:
+                this._addPost();
+                break;
+
+            case ADD_MESSAGE:
+                this._addMessage();
+                break;
+
+            case ADD_CHANGE_NEW_POST_TEXT:
+                this._addChangeNewPostText(action.newText);
+                break;
+
+            case ADD_CHANGE_NEW_MESSAGE_TEXT:
+                this._addChangeNewMessageText(action.newText);
+                break;
+
+            default:
+                break;
+        }
+    },
+
+    _addPost() {
         if (!this._state.profilePage.textareasValue) return;
 
         let newPost = {
@@ -60,10 +86,10 @@ let store = {
 
         this._state.profilePage.postsData.unshift(newPost);
         this._state.profilePage.textareasValue = '';
-        this._subscriber(); //rerenderEntireTree(this._state); //????
+        this._subscriber();
     },
 
-    addMessage() {
+    _addMessage() {
         if (!this._state.dialogsPage.messagesData.textareasValue) return;
 
         let newMessage = {
@@ -78,16 +104,21 @@ let store = {
 
     },
 
-    addChangeNewPostText(text) {
+    _addChangeNewPostText(text) {
         this._state.profilePage.textareasValue = text;
         this._subscriber(); //rerenderEntireTree(state); 
     },
 
-    addChangeNewMessageText(text) {
+    _addChangeNewMessageText(text) {
         this._state.dialogsPage.messagesData.textareasValue = text;
         this._subscriber(); //rerenderEntireTree(state); 
     },
 
 }
+
+export const addPostCreator = () => ({ type: ADD_POST });
+export const addMessageCreator = () => ({ type: ADD_MESSAGE });
+export const addChangeNewPostText = (text) => ({ type: ADD_CHANGE_NEW_POST_TEXT, newText: text });
+export const addChangeNewMessageText = (text) => ({ type: ADD_CHANGE_NEW_MESSAGE_TEXT, newText: text });
 
 export default store;

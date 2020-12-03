@@ -1,23 +1,22 @@
 import React from 'react';
 import stl from './NewPost.module.css';
+import { addPostCreator, addChangeNewPostText } from '../../../../redux/store';
 
 const NewPost = (probs) => {
-    let textareaElement = React.createRef();
-
     let addPost = () => {
-        probs.store.addPost();
+        probs.dispatch(addPostCreator());
     }
 
-    let rendChangeText = () => {
-        let text = textareaElement.current.value;
-        probs.store.addChangeNewPostText(text);
+    let rendChangeText = (e) => {
+        const text = e.target.value;
+        probs.dispatch(addChangeNewPostText(text));
     }
 
     return (
         <div className={stl.newPost}>
             Новая запись:
             <div>
-                <textarea ref={textareaElement} onInput={rendChangeText} value={probs.textareasValue} />
+                <textarea onInput={rendChangeText} value={probs.textareasValue} placeholder='Введите текст...' />
             </div>
             <div>
                 <button onClick={addPost}>Добавить запись</button>

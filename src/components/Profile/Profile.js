@@ -9,7 +9,7 @@ const Profile = (probs) => {
         <div className={stl.profile}>
             <Wallpaper />
             <Person />
-            <Posts store={probs.store} />
+            <Posts store={probs.store} dispatch={probs.dispatch} />
         </div>
     );
 }

@@ -26,7 +26,7 @@ const Messages = (probs) => {
             </div>
             <div className={stl.newMessage}>
                 <NewMessage store={probs.store}
-                    textareasValue={probs.messagesData.textareasValue} />
+                    textareasValue={probs.messagesData.textareasValue} dispatch={probs.dispatch} />
             </div>
 
 
